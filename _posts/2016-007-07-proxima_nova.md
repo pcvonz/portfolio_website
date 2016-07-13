@@ -4,8 +4,8 @@ title: Speed Wiki
 type: graphic-design
 ---
 
-<div class="center-image"> <img src="{{ site.baseurl
-}}/media/images/swiki.gif" /> </div> <div class="text-content">
+<div class="center-image"> <img src="{{ site.baseurl }}/media/images/swiki.gif"
+/> </div> <div class="text-content">
 
     <h2> SPEED WIKI </h2>
 

@@ -45,4 +45,59 @@ document.addEventListener("DOMContentLoaded", function(event) {
     updateTransitionSphere();
     updateTransitionCone();
     updateTransitionCube();
+    var graphic = document.getElementById("graphic-design-tab");
+    var web = document.getElementById("web-design-tab");
+    var prog = document.getElementById("programming-tab");
+    graphic.addEventListener("click", function( event ) {
+        var header = document.getElementById("header");
+        // display the current click count inside the clicked div
+        if (header.className != "graphic") {
+            header.className = "graphic";
+        }
+        update_content("graphic-design");
+
+      }, false);
+    web.addEventListener("click", function( event ) {
+        var header = document.getElementById("header");
+        // display the current click count inside the clicked div
+        if (header.className != "web") {
+            header.className = "web";
+        } 
+        update_content("web-design");
+
+      }, false);
+    prog.addEventListener("click", function( event ) {
+        var header = document.getElementById("header");
+        // display the current click count inside the clicked div
+        if (header.className != "prog") {
+            header.className = "prog";
+        } 
+        update_content("programming");
+      }, false);
 });
+
+function update_content(class_name) {
+    graph = document.getElementsByClassName("graphic-design");
+    web = document.getElementsByClassName("web-design");
+    prog = document.getElementsByClassName("programming");
+        for(i = 0; i < graph.length; i++) {
+            graph[i].style.display = "none";
+        }
+   
+        for(i = 0; i < prog.length - 1 ; i++) {
+            prog[i].style.display = "none";
+        }
+        for(i = 0; i < web.length - 1; i++) {
+            web[i].style.display = "none";
+        }
+
+    to_show = document.getElementsByClassName(class_name);
+    console.log(to_show);
+    if(to_show.length > 0){ 
+        for(i = 0; i <= to_show.length - 1 ; i++) {
+            to_show[i].style.display = "";
+        }
+    }
+
+    
+}

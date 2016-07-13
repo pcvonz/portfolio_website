@@ -23,15 +23,19 @@ nav {@include span(12 of 12); }
     padding: 1em 0 1em 0;
 }
 
-.menu ul li:first-child {
+.menu div {
+    cursor: pointer;
+}
+
+.menu ul div:first-child  li{
     background-color: #94D0DE;
 }
 
-.menu ul li:nth-child(2){
+.menu ul div:nth-child(2) li{
     background-color: #CC6C6C;
 
 }
-.menu ul li:last-child {
+.menu ul div:last-child  li{
     background-color: #EFD084;
 }
 
@@ -82,13 +86,25 @@ nav {@include span(12 of 12); }
     height: 34vw;
 }
 
+.page-content {
+    min-height: 40vw;
+}
+
 //Header
-.site-header {
+.graphic {
     background-color: #94D0DE;
     height: 30vw;
 }
+.web {
+    background-color: #CC6C6C;
+    height: 30vw;
+}
+.prog {
+    background-color: #EFD084;
+    height: 30vw;
+}
 
-.site-header h1 {
+h1 {
     @include span(12 of 12);
     text-align: center;
     color: white;
