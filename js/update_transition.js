@@ -45,6 +45,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
     updateTransitionSphere();
     updateTransitionCone();
     updateTransitionCube();
+    add_tab_listener();
+    update_hash()
+});
+
+function update_hash() {
+
+}
+
+function add_tab_listener() {
     var graphic = document.getElementById("graphic-design-tab");
     var web = document.getElementById("web-design-tab");
     var prog = document.getElementById("programming-tab");
@@ -74,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         } 
         update_content("programming");
       }, false);
-});
+}
 
 function update_content(class_name) {
     graph = document.getElementsByClassName("graphic-design");
@@ -84,15 +93,14 @@ function update_content(class_name) {
             graph[i].style.display = "none";
         }
    
-        for(i = 0; i < prog.length - 1 ; i++) {
+        for(i = 0; i < prog.length; i++) {
             prog[i].style.display = "none";
         }
-        for(i = 0; i < web.length - 1; i++) {
+        for(i = 0; i < web.length; i++) {
             web[i].style.display = "none";
         }
 
     to_show = document.getElementsByClassName(class_name);
-    console.log(to_show);
     if(to_show.length > 0){ 
         for(i = 0; i <= to_show.length - 1 ; i++) {
             to_show[i].style.display = "";

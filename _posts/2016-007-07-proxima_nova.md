@@ -1,18 +1,11 @@
 ---
 layout: default 
-title: Speed Wiki
+title: Proxima Nova
 type: graphic-design
+description: A video made for a graphic design class
 ---
 
-<div class="center-image"> <img src="{{ site.baseurl }}/media/images/swiki.gif"
-/> </div> <div class="text-content">
+<div class="center-image"> 
+<iframe src="https://player.vimeo.com/video/156522618" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div> <div class="text-content">
 
-    <h2> SPEED WIKI </h2>
-
-    <p>
-    This program scrapes a random page off of wikipedia and then displays the
-    content word by wordf depending on the speed the user selects. It is intended
-    to run indefinitely. I used a python webserver called flask, jquery, and an html5 canvas
-    </p>
-
-</div>

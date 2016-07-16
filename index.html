@@ -6,9 +6,13 @@ layout: default
 
   <ul class="post-list" id="posts">
     {% for post in site.posts %}
-      <li class="{{ post.type }}">
-          {{ post.content }}
-      </li>
+        <div class="center-image"> 
+            {{ post.content }}
+        </div>
+        <div class="text-content">
+            <h2> {{ post.title }} </h2>
+            <p> {{ post.description }} </p>
+        </div>
     {% endfor %}
   </ul>
 
