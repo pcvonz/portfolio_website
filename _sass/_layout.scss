@@ -1,4 +1,5 @@
 @import "../bower_components/susy/sass/susy";
+$iframe-width: 65%;
 $susy: (
     columns: 12,
     gutters: 0,
@@ -12,6 +13,13 @@ nav {@include span(12 of 12); }
 .wrap {
     @include container;
 }
+
+hr {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
 //Menu
 
 .menu ul li {
@@ -49,15 +57,16 @@ nav {@include span(12 of 12); }
 .center-image{
     width: 100%;
     text-align: center;
-    margin: 2em 0;
+    margin: 4em 0;
     @include span(12 of 12);
 }
 
-.center-image img, iframe {
-    max-height: 630px;
-    max-width: 90%
+.center-image img {
+    max-width: 80%;
 }
-
+.center-image iframe {
+    max-width: $iframe-width;
+}
 
 .text-content {
     @include span(12 of 12); 
@@ -67,6 +76,7 @@ nav {@include span(12 of 12); }
     display:block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 3em;
     max-width: 40em;
 }
 .text-content h2 {
@@ -100,7 +110,7 @@ h1 {
     @include span(12 of 12);
     text-align: center;
     color: white;
-    font-size: 5vw;
+    font-size: 4vw;
     font-weight: bold;
     bottom: 6vw;
     margin-top: 1vw;
@@ -162,7 +172,7 @@ $svg_height: 5vw;
     position: relative;
     bottom: 15vw;
     background-color: black;
-    width: 90%;
+    width: $iframe-width;
     font-weight: bold;
     font-size: 2em;
 }
