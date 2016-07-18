@@ -46,12 +46,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
     updateTransitionCone();
     updateTransitionCube();
     add_tab_listener();
-    update_hash()
+    //Updates the content based on the current hash
+    if(document.location.hash == "") {
+        document.location.hash = "#graphic-design";
+    }
+    var header = document.getElementById("header");
+    header.className = document.location.hash.split("#")[1]
+    update_content(document.location.hash.split("#")[1])
 });
 
-function update_hash() {
-
-}
 
 function add_tab_listener() {
     var graphic = document.getElementById("graphic-design-tab");
@@ -60,8 +63,8 @@ function add_tab_listener() {
     graphic.addEventListener("click", function( event ) {
         var header = document.getElementById("header");
         // display the current click count inside the clicked div
-        if (header.className != "graphic") {
-            header.className = "graphic";
+        if (header.className != "graphic-design") {
+            header.className = "graphic-design";
         }
         update_content("graphic-design");
 
@@ -69,8 +72,8 @@ function add_tab_listener() {
     web.addEventListener("click", function( event ) {
         var header = document.getElementById("header");
         // display the current click count inside the clicked div
-        if (header.className != "web") {
-            header.className = "web";
+        if (header.className != "web-design") {
+            header.className = "web-design";
         } 
         update_content("web-design");
 
@@ -78,17 +81,18 @@ function add_tab_listener() {
     prog.addEventListener("click", function( event ) {
         var header = document.getElementById("header");
         // display the current click count inside the clicked div
-        if (header.className != "prog") {
-            header.className = "prog";
+        if (header.className != "programming") {
+            header.className = "programming";
         } 
         update_content("programming");
       }, false);
 }
 
 function update_content(class_name) {
-    graph = document.getElementsByClassName("graphic-design");
-    web = document.getElementsByClassName("web-design");
-    prog = document.getElementsByClassName("programming");
+    document.location.hash = "#" + class_name;
+    graph = document.getElementsByClassName("graphic-design-content");
+    web = document.getElementsByClassName("web-design-content");
+    prog = document.getElementsByClassName("programming-content");
         for(i = 0; i < graph.length; i++) {
             graph[i].style.display = "none";
         }
@@ -100,7 +104,7 @@ function update_content(class_name) {
             web[i].style.display = "none";
         }
 
-    to_show = document.getElementsByClassName(class_name);
+    to_show = document.getElementsByClassName(class_name+ "-content");
     if(to_show.length > 0){ 
         for(i = 0; i <= to_show.length - 1 ; i++) {
             to_show[i].style.display = "";

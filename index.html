@@ -6,13 +6,23 @@ layout: default
 
   <ul class="post-list" id="posts">
     {% for post in site.posts %}
+    <div class="{{ post.type }}">
         <div class="center-image"> 
-            {{ post.content }}
+            {% if  post.image.size > 0 %}
+                <a href="{{site.baseurl}}{{post.image}}"><img src="{{ site.baseurl }}{{post.image }}" /></a>
+            {% endif %}
+            {% if  post.iframe.size > 0 %}
+                <iframe src="{{site.baseurl}}{{ post.iframe }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            {% endif %}
+            {% if  post.external-iframe.size > 0 %}
+                {{ post.external-iframe }}
+            {% endif %}
         </div>
         <div class="text-content">
             <h2> {{ post.title }} </h2>
-            <p> {{ post.description }} </p>
+            {{ post.content}}
         </div>
+    </div>
     {% endfor %}
   </ul>
 

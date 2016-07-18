@@ -4,12 +4,14 @@
 @charset "utf-8";
 @font-face {
     font-family: Fira Sans;
-    src: "media/fonts/FiraSans-Bold.woff";
+    src: "{{ site.baseurl }}/media/fonts/FiraSans-Bold.woff";
+    src: "{{ site.baseurl }}/media/fonts/FiraSans-Book.woff";
+    src: "{{ site.baseurl }}/media/fonts/FiraSans-Light.woff";
 }
 
 
 // Our variables
-$base-font-family: "FiraSans-Bold, sans-serif, sans";
+$base-font-family: FiraSans-Bold, sans-serif, sans;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;

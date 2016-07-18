@@ -47,19 +47,25 @@ nav {@include span(12 of 12); }
  }
 
 .center-image{
-    margin-top: 2em;
-    margin-bottom: 2em;
+    width: 100%;
+    text-align: center;
+    margin: 2em 0;
     @include span(12 of 12);
 }
 
 .center-image img, iframe {
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
+    max-height: 630px;
+    max-width: 90%
+}
+
+.center-image iframe {
+    width: 100%;
+    min-height: 600px;
 }
 
 .text-content {
     @include span(12 of 12); 
+    text-align: left;
 }
 .text-content p {
     display:block;
@@ -71,19 +77,9 @@ nav {@include span(12 of 12); }
     text-align: center;
 }
 
-.graphic-design, .web-design, .programming  {
+.graphic-design-content, .web-design-content, .programming-content  {
     list-style: none;
     background-color: #F5F5F5;
-}
-
-.web-design {
-    background-color: #3F3F3F;
-    height: 34vw;
-}
-
-.programming {
-    background-color: #F5F5F5;
-    height: 34vw;
 }
 
 .page-content {
@@ -91,15 +87,15 @@ nav {@include span(12 of 12); }
 }
 
 //Header
-.graphic {
+.graphic-design {
     background-color: #94D0DE;
     height: 30vw;
 }
-.web {
+.web-design {
     background-color: #CC6C6C;
     height: 30vw;
 }
-.prog {
+.programming {
     background-color: #EFD084;
     height: 30vw;
 }
@@ -108,9 +104,10 @@ h1 {
     @include span(12 of 12);
     text-align: center;
     color: white;
-    font-size: 3vw;
+    font-size: 5vw;
     font-weight: bold;
     bottom: 6vw;
+    margin-top: 1vw;
 }
 
 //header shapes
@@ -164,6 +161,7 @@ $svg_height: 5vw;
 
 .site-footer {
     margin-top: 1em;
+    padding-bottom: 1em;
     @include span(12 of 12);
     background-color: #94D0DE;
 }
