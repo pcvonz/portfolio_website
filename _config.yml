@@ -10,8 +10,8 @@ title: Paul Von Zimmerman's Portfolio
 email: pcvonz@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   
-baseurl: "/portfolio_website" # the subpath of your site, e.g. /blog
-url: "pcvonz.github.io" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "paulvonzimmerman.com" # the base hostname & protocol for your site
 twitter_username: pcvonz 
 github_username: pcvonz 
 
