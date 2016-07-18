@@ -12,7 +12,12 @@ layout: default
                 <a href="{{site.baseurl}}{{post.image}}"><img src="{{ site.baseurl }}{{post.image }}" /></a>
             {% endif %}
             {% if  post.iframe.size > 0 %}
-                <iframe src="{{site.baseurl}}{{ post.iframe }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <div class="dig-game">
+                    <iframe id="dig" class="not-clicked" src="{{site.baseurl}}{{ post.iframe }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    <div class="dig-button">
+                        <a id="dig-on"> Click to play </a>
+                    </div>
+                </div>
             {% endif %}
             {% if  post.external-iframe.size > 0 %}
                 {{ post.external-iframe }}

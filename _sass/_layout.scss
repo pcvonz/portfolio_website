@@ -58,10 +58,6 @@ nav {@include span(12 of 12); }
     max-width: 90%
 }
 
-.center-image iframe {
-    width: 100%;
-    min-height: 600px;
-}
 
 .text-content {
     @include span(12 of 12); 
@@ -108,6 +104,7 @@ h1 {
     font-weight: bold;
     bottom: 6vw;
     margin-top: 1vw;
+    font-weight: light;
 }
 
 //header shapes
@@ -157,6 +154,43 @@ $svg_height: 5vw;
     transition: top 2s;
 }
 
+//iframe
+
+.dig-button {
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    bottom: 15vw;
+    background-color: black;
+    width: 90%;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.dig-button a {
+    color: white;
+}
+.dig-button a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.not-clicked {
+    background-image: url("../media/images/dig-preview.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    min-height: 400px;
+}
+
+iframe.clicked {
+    min-height: 600px;
+}
+
+.center-image iframe {
+    width: 100%;
+}
+
 //Footer
 
 .site-footer {
@@ -185,3 +219,4 @@ $svg_height: 5vw;
 .social-media-list a {
     color: white
 }
+

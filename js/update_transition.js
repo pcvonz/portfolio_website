@@ -40,12 +40,16 @@ function updateTransitionSphere() {
 var intervalID = window.setInterval(updateTransitionCube, 2000);
 var intervalID = window.setInterval(updateTransitionCone, 2200);
 var intervalID = window.setInterval(updateTransitionSphere, 2400);
-
 document.addEventListener("DOMContentLoaded", function(event) {
     updateTransitionSphere();
     updateTransitionCone();
     updateTransitionCube();
     add_tab_listener();
+    add_iframe_listener();
+    // Removing src and storing for later
+    window.dig = document.getElementById("dig").src;
+    var dig = document.getElementById("dig");
+    dig.src = "";
     //Updates the content based on the current hash
     if(document.location.hash == "") {
         document.location.hash = "#graphic-design";
@@ -55,6 +59,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
     update_content(document.location.hash.split("#")[1])
 });
 
+function add_iframe_listener() {
+    var digOn = document.getElementById("dig-on");
+    var iframe = document.getElementById("dig");
+    digOn.addEventListener("click", function (event) {
+        iframe.className = "clicked";
+        digOn.style.display = "none";
+        iframe.src = window.dig;
+    }, false);
+}
 
 function add_tab_listener() {
     var graphic = document.getElementById("graphic-design-tab");
