@@ -1,0 +1,24 @@
+.content-fullwidth {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  p, h3 {
+    color: white;
+  }
+  @include breakpoint($tablet) {
+    flex-direction: row;
+  }
+
+}
+
+.gallery {
+  color: white;
+  div {
+    background-color: $ur-styleguide-color;
+    padding: 0 2em;
+    @include span(12 of 12);
+      @include breakpoint($tablet) {
+      }
+  }
+}

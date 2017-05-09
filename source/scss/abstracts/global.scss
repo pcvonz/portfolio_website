@@ -1,0 +1,57 @@
+h1 {
+  font-size: 1.3em;
+  font-weight: 2em;
+  text-transform: uppercase;
+}
+li {
+  list-style: none;
+  margin-bottom: .5em;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+
+h3 {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 1em 0 .5em 0;
+  clear: both;
+}
+
+p {
+  line-height: 1.3em;
+  margin: .2em 0 1em 0;
+}
+
+p, h1, h2, h3 {
+  color: #323232;
+}
+
+
+.faxian-color {
+  background-color: $faxian-color;
+}
+
+.hit-and-bun-color {
+ background-color: $hit-and-bun-color; 
+}
+
+.secutor-color {
+  background-color: $secutor-color;
+}
+
+body {
+  font-size: 15px;
+}
+a {
+  color: $secondary-color;
+  text-decoration: none;
+}
+a:visited {
+    color: $ternary-color;
+}
+

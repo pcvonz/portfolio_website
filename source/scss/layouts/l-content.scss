@@ -1,0 +1,10 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+.content {
+  margin-bottom: 10em;
+  @include container(12 center 100%);
+  @include span(12 of 12 );
+  max-width: 1680px;
+}

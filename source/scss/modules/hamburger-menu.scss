@@ -1,0 +1,26 @@
+.menu-container {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  z-index: 100;
+  text-align: right;
+  margin-top: 20px;
+  width: 100%;
+  @include breakpoint($tablet) {
+      display: none; 
+  }
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white; 
+    }
+
+}
+
+#menu-button {
+  cursor: pointer; }
+
+.menu-bar {
+  fill: black; 
+}
