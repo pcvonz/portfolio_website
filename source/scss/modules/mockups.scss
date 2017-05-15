@@ -1,9 +1,12 @@
-.mockups {
-  @include breakpoint(522px) {
+.l-work-content {
+  .mockups {
     @include span(12 of 12);
     img{
-      @include gallery(6 of 12);
+      @include breakpoint(522px) {
+        @include gallery(6 of 12);
+        margin-bottom: 2em;
+      }
     }
+    margin-bottom: 2em;
   }
-
 }

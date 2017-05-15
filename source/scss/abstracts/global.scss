@@ -43,6 +43,9 @@ p, h1, h2, h3 {
 .secutor-color {
   background-color: $secutor-color;
 }
+.townie-color {
+  background-color: $townie-color;
+}
 
 body {
   font-size: 15px;
@@ -55,3 +58,6 @@ a:visited {
     color: $ternary-color;
 }
 
+ul {
+  padding-left: 1em;
+}

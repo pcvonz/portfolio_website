@@ -1,6 +1,5 @@
 var dropdown = require('./dropdown.js');
 var anim = require('./anim.js');
-var THREE = require('three');
 
 //var scene, camera, renderer;
 //var geometry, material, mesh;
