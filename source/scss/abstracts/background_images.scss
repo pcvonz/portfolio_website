@@ -1,10 +1,10 @@
 
-.hit-and-bun {
-  background-image: url("../images/hit_and_bun.png");
+.quasar {
+  background-image: url("../images/quasar/quasar.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  background-color: $hit-and-bun-color;
+  background-color: $quasar-color;
 }
 
 .faxian {
@@ -35,6 +35,14 @@
 
 .townie {
   background-image: url("../images/townie.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-color: $townie-color;
+}
+
+.senior {
+  background-image: url("../images/senior/senior.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
