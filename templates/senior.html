@@ -1,0 +1,73 @@
+{% extends "layouts/content.html" %}
+
+{% block content %}
+<div class="work-hero senior">
+</div>
+<div class="l-work-content">
+    <div class="mockups">
+      <img src="/images/senior/phone.png">
+      <img src="/images/senior/laptop.png">
+    </div>
+  <h1> Senior Exhibition Website </h1>
+  <h2> The brief </h2>
+    <p> Create a single page website for the 2017 senior design exhibition using the guidelines established by a separate branding committee.</p>
+  <h2> Research </h2>
+  <h3> Wireframes </h3>
+  <div class="img-preview">
+      {% include "partials/mg.svg" %}
+    <a href="/images/senior/mockups_1.png" class="half">
+      <img src="/images/senior/mockups_1.png">
+    </a>
+    <a href="/images/senior/mockups_2.png"class="half">
+      <img src="/images/senior/mockups_2.png">
+    </a>
+  </div>
+    <p>
+    Each member of the committee came up with their own wireframes. We then
+    critiqued and then combined them to create our final wireframe. This wireframe was
+    flushed out in illustrator and then written in HTML. 
+    </p>
+    <h3> Final Mockup </h3>
+    <div class="img-preview">
+      {% include "partials/mg.svg" %}
+      <a href="/images/senior/final_mockup.png">
+        <img src="/images/senior/final_mockup.png">
+      </a>
+    </div>
+    <p> 
+      The final mockup was arrived at after multiple iterations. Creating the
+      final static mockup was done in conjuction with in browser experiments. The
+      slider that moves the letters up and down was done quickly and early one
+      evening to sort out what was possible in our narrow time frame. In browser
+      experimentation was especially important to sort out where we wanted to
+      integrate motion into the page. At one point, I had a swarm of letters
+      flocking around the web page which was a little bit much, but that
+      experiment resulted in the idea to pattern the background with letters
+      instead. 
+    </p>
+  <h2> Implementation </h2>
+  <h3> Technologies Used </h3>
+  <ul> 
+    <li> Gulp.js </li>
+    <li> Simple carousel </li>
+    <li> Susy </li>
+    <li> SASS </li>
+    <li> SMACSS (CSS organization)</li>
+  </ul>
+  <p> 
+    I built the website using gulp as the task runner, you can see my <a
+      href="https://github.com/pcvonz/gulp-starter"> starter template here.</a> I
+    use gulp to automatically reload the browser on file changes (browser sync),
+    convert SASS, convert nunjucks templates, minify CSS/JS/Images, and auto
+    prefix CSS. 
+  </p>
+  <p> 
+    For a single page website with a fairly simple grid system, I decided to use Susy, which is a small SCSS grid making toolkit.
+    The SCSS was organized according to the SMACSS principles. 
+  </p>
+    <div class="web-link townie-color">
+      <a href="https://pcvonz.github.io/design_senior_show_lab/"> Visit the website </a>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends "layouts/content.html" %}
+
+{% block content %}
+<div class="work-hero quasar">
+</div>
+<div class="l-work-content">
+    <div class="video-mockup">
+      <video loop video autoplay>
+        <source src="/images/quasar/quasar_demo.webm">
+          Your browser doesn't support this tag
+      </video>
+    </div>
+  <h1> Quasar Alarm </h1>
+  <h2> The Rationale:</h2>
+    <p> Create an alarm that encourages a person to get out of bed, rather than punishing a person if they don't. </p>
+    <p> Make the alarm simple and easy to use. </p>
+    <p> Easy to extend, make it so any other person who knows Js & HTML can easily add new functionality. </p>
+    <p> Make it dependable. </p>
+    <p> 
+  <h2> The Solution: </h2>
+    Allow users to define different actions that can be performed when an alarm goes
+    off. Perhaps they want to listen to everything that is on their to do list
+    for the day, what the weather is like, and then listen to a live stream of
+    NPR. Instead of being pestered to wake up, they are prepared for the day
+    ahead.
+    </p> 
+  <h2> Process </h2>
+  <h3> Wireframes </h3>
+  <div class="img-preview">
+    {% include "partials/mg.svg" %}
+    <a href="/images/quasar/wireframe.jpg">
+      <image src="/images/quasar/wireframe.jpg"/>
+    </a>
+  </div>
+  <h3> New Users </h3>
+  <p> The first thing they are taken to is an empty alarm. They see the time,
+  the alarm name, and a button that says 'Add'. When the add button is clicked,
+  the user will be given a list of default actions with a '+' next to each one.
+  Clicking the '+' tells the user that they have added the action to the alarm.
+  Clicking the dropdown shows the  various settings, perhaps an area code if
+  they tap the Weather action. Here they can also test the alarm to see what it
+  does. 
+  </p>
+  <h3> Creating a new procedure</h3>
+    <p> 
+      The ability to create a new action is available from the same menu that
+      is displayed when a user tries to add an alarm, consolidating it in a
+      single place.  
+    </p>
+  <h3> Create a new alarm  </h3> 
+    <p>
+      At the bottom is a row of 4 circles which designate different alarms.  Each
+      alarm can be customized to only go off on certain days and be given a title.
+    </p>
+  <h2> Implementation </h2>
+  <h3> Technologies Used </h3>
+  <ul> 
+    <li> Cordova </li>
+    <li> Quasar </li>
+    <li> Vue 2</li>
+    <li> Vuex </li>
+    <li> Vue-Router </li>
+    <li> SASS </li>
+    <li> Vue Draggable </li>
+  </ul>
+  <p> 
+    <h4> Vue & Quasar </h4> 
+    I used the quasar framework, a web framework for creating web, mobile, and desktop applications powered by Vue 2. 
+    Quasar provides a material theme and useful vue components that make an
+    application feel and control like a native android app, it's also easy to
+    customize. </p>
+  <h3> Testing </h3>
+  <p>
+    Through user testing and interviews I was able to discern what functionality would be most beneficial to add.
+  </p>
+  <ul>
+    <li>Alerting the user when they open the alarm that the audio volume is low.</li>
+    <li>Displaying the amount of time until the alarm will ring. </li>
+    <li>Feedback for every action, specifically when a new procedure has been added to the alarm. </li>
+    <li> Quickly adding and editing new procedures. The major change from my wireframes was converting created procedures to dropdowns.</li>
+    <li> Be able to test newly created actions. </li>
+  </ul>
+    <div class="web-link quasar-color">
+      <a href="https://github.com/pcvonz/qusaralarm"> View the repos </a>
+    </div>
+
+</div>
+{% endblock %}

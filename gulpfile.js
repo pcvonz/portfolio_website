@@ -39,6 +39,10 @@ gulp.task('images', function() {
 
 });
 
+gulp.task('video', function () {
+  return gulp.src('source/images/**/*.+(webm|mp4)')
+  .pipe(gulp.dest('public/images'))
+});
 
 gulp.task('js', function () {
   // set up the browserify instance on a task basis
@@ -91,8 +95,9 @@ gulp.task('browserSync', function() {
 //and then watch for file changers
 gulp.task('watch', ['assets', 'nunjucks', 'sass', 'images', 'js', 'browserSync'], function() {
     gulp.watch('source/scss/**/*.scss', ['sass', browserSync.reload]);
-    gulp.watch('templates/**/*.html', ['nunjucks']);
+    gulp.watch('templates/**/*.+(html|svg)', ['nunjucks']);
     gulp.watch('source/js/**/*.js', ['js', browserSync.reload]);
     gulp.watch('source/images/**/*.+(png|jpg|gif|svg)', ['images', browserSync.reload]);
+    gulp.watch('source/images/**/*.+(webm|mp4)', ['video', browserSync.reload]);
     gulp.watch('source/assets/*)', ['assets', browserSync.reload]);
 });

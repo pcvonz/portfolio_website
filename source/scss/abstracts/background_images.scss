@@ -7,6 +7,14 @@
   background-color: $quasar-color;
 }
 
+.godot-loader {
+  background-image: url("../images/godot_loader/loader.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-color: $godot-loader-color;
+}
+
 .faxian {
   background-image: url("../images/faxian.png");
   background-repeat: no-repeat;

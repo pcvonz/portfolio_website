@@ -2,16 +2,14 @@ h1 {
   font-size: 1.3em;
   font-weight: 2em;
   text-transform: uppercase;
-}
-li {
-  list-style: none;
-  margin-bottom: .5em;
+  border-bottom: 2px solid $gray;
+  padding-bottom: .5em;
 }
 
 h2 {
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 
@@ -22,8 +20,13 @@ h3 {
   clear: both;
 }
 
+li {
+  list-style: square;
+  margin-bottom: .5em;
+}
+
 p {
-  line-height: 1.3em;
+  line-height: 1.7em;
   margin: .2em 0 1em 0;
 }
 
@@ -31,9 +34,16 @@ p, h1, h2, h3 {
   color: #323232;
 }
 
+.godot-loader-color {
+  background-color: $godot-loader-color;
+}
 
 .faxian-color {
   background-color: $faxian-color;
+}
+
+.quasar-color {
+  background-color: $quasar-color;
 }
 
 .hit-and-bun-color {

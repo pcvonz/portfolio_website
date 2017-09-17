@@ -9,4 +9,61 @@
     }
     margin-bottom: 2em;
   }
+  .video-mockup {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    video {
+      background-image: url("../images/quasar/phone_mockup.png");
+      background-repeat: no-repeat;
+      background-size: 277px 551px;
+      padding: 41px 11px 80px 3px;
+      min-width: 285.7px;
+    }
+  }
+  .img-preview {
+    width: 100%;
+    position: relative;
+    max-height: 30em;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 2em;
+    .half {
+      display: block;
+      float: left;
+      width: 45%;
+      padding: 2em;
+      transition: all .2s;
+      &:hover {
+        width: 50%;
+      }
+    }
+  }
+  .img-preview {
+    svg { 
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 64px;
+      height: 64px;
+      transition: all .2s;
+      border-radius: 100%;
+      fill: white;
+      #rect1443 {
+        fill: black;
+        stroke-width: 0;
+        transition: all .2s;
+      }
+    }
+    &:hover {
+      #svg8 {
+        fill: black;
+      }
+      #rect1443 {
+        stroke-width: 8.23;
+        stroke: white;
+      }
+    }
+  }
 }
+

@@ -1,5 +1,4 @@
 nav {
-
     img {
       display: inline-block;
       float: left;
@@ -38,6 +37,7 @@ nav {
     ul {
       padding: 0;
       li {
+        list-style: none;
         width: 100%;
         @include breakpoint($tablet) {
           width: unset;

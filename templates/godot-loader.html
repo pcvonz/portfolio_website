@@ -1,0 +1,43 @@
+{% extends "layouts/content.html" %}
+
+{% block content %}
+<div class="work-hero godot-loader">
+</div>
+<div class="l-work-content">
+  <h1> Godot Web Export </h1>
+  <h2> The brief </h2>
+    <p>
+    Godot is a community made game making tool that can export projects to
+    various platforms. One of the platforms Godot can target is the web. The
+    upside of exporting to HTML5 is that almost anyone with a browser can load
+    up and play your game, the downside is that it can take a considerable
+    amount of time to load. From a developers perspective, there needs to be a
+    quick and easy way to create a custom loader that fits into the brand of
+    your game. An end user needs to know the progress of the download and that
+    the game is loading. 
+    </p> 
+  <h2> Research </h2>
+  <h2> Development </h3>
+    <p> 
+    Vue’s component based system made mocking up and testing ideas a fast
+    process. Hosting on GitHub meant that I had a quick way to update a static
+    web page that could be shared with other Godot contributors providing the
+    opportunity to receive feedback.
+    </p>
+    <a href="https://pcvonz.github.io/godot_loader_playground/"> Check out the prototypes here. </a>
+  <h2> Implementation </h2>
+  <p> 
+  Godot uses Emscripten to compile C++ into javascript/WASM. Contributor
+  <i>eska</i> made a very simple template and placeholder animations. Implementing the
+  new loader was a matter of modifying the template. In the interest of making
+  this process as easy and straightforward as possible, I created a simple
+  Webpack project with a small configuration file to modify the colors and
+  logo. Now people can easily customize this project to generate a new
+  template.
+  </p>
+    <div class="web-link godot-loader-color">
+      <a href="https://pcvonz.github.io/godot_loader_test/"> Visit the website </a>
+    </div>
+
+</div>
+{% endblock %}
